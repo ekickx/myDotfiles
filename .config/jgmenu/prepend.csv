@@ -1,0 +1,5 @@
+# Search box
+@icon,,45,15,60,60,0,left,top,,,/home/ekickx/.face.png
+@search,,125,35,454,30,3,left,top,#ffffff 100,#222222 3,Type to search...
+@rect,,120,30,530,40,3,left,top,#ffffff 100,#222222 3,
+
