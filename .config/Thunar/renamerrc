@@ -4,7 +4,7 @@ LastActiveRenamer=ThunarSbrReplaceRenamer
 
 [ThunarSbrReplaceRenamer]
 Regexp=FALSE
-Replacement=_screenshot
+Replacement=
 CaseSensitive=TRUE
-Pattern=_scrot
+Pattern=link to\ 
 
