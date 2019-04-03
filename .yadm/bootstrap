@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Clone submodule
+
+# Install tmux plugins
+echo "Setting up tmux"
+tmux source ~/.tmux.conf
+
+# Set up neovim
+echo "Setting up neovim"
+nvim +PlugInstall +qall > /dev/null
+
+# Set up MPV
+echo "Setting up mpv"
+~/.config/mpv/init.sh > /dev/null
