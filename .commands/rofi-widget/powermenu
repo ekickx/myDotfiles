@@ -1,0 +1,22 @@
+#!/bin/bash
+
+dmenu(){
+  choice=$(echo -e "⏻ Shutdown\n Reboot\n⏾ Sleep\n Logout" | rofi \
+  -dmenu \
+  -p "Do" \
+  -location 1 \
+  -xoffset 45\
+  -width 18\
+  -lines 4\
+  -yoffset 5)
+  case "$choice" in
+    "⏻ Shutdown") systemctl poweroff ;;
+    " Reboot") systemctl reboot ;;
+    "⏾ Sleep") systemctl suspend ;;
+    " Logout") openbox --exit;;
+  esac
+}
+dmenu &
+source ~/.commands/rofi-widget/find-rofi # Find rofi id
+transset -i $win_id 1
+

@@ -1,0 +1,20 @@
+# Geometry
+geometry="250x8-30+15"
+# Window Transparency
+transparency = 0
+# Height of separator between notifications
+separator_height = 2
+# Vertical padding
+padding = 8
+# Horizontal padding
+horizontal_padding = 8
+# Border width.  Set to 0 to disable
+frame_width = 3
+# Border color
+frame_color = "#aaaaaa"
+# Border color between notifications frame = same as above
+separator_color = frame
+# Font
+font = Monospace 8
+# Icon
+icon_path = /usr/share/icons/Papirus-Dark-Breeze-actions/symbolic/status/

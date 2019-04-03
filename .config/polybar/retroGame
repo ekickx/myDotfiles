@@ -1,0 +1,130 @@
+[fonts]
+nol = Mini Pixel:size=11.5;2
+satu = mononoki Nerd Font:size=12;2
+dua = TakaoPGothic:size=10;2
+
+[bar/bar0]
+monitor = eDP-1
+fixed-center = false
+height = 28
+width = 99%
+
+background = #393135
+foreground = #FEFEFD
+
+font-0 = ${fonts.nol}
+font-1 = ${fonts.satu}
+font-2 = ${fonts.dua}
+
+border-size = 7
+border-left-size = 21
+border-color = #00000000
+
+padding = 0
+module-margin = 0
+
+modules-left = powermenu ewmh title
+modules-right = wireless-network battery temperature date
+
+tray-position = right
+tray-background = #393135
+
+[module/powermenu]
+type = custom/text
+content = ""
+content-padding = 2
+click-left = xfce4-session-logout
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = true
+format = <label-state>
+
+icon-0 = code;
+icon-1 = graphic;
+icon-2 = office;
+icon-3 = game;
+
+label-active = %icon%
+label-active-foreground = #393135
+label-active-background = #FEFEFD
+label-active-padding = 2
+
+label-inactive = %icon%
+label-inactive-foreground = #FEFEFD
+label-inactive-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = #FEFEFD
+label-empty-padding = 2
+
+[module/title]
+type = internal/xwindow
+format-padding = 3
+label-empty = "No Window Active"
+label-maxlen = 45
+
+[module/wireless-network]
+type = internal/network
+interface = wlp9s0
+interval = 3.0
+ping-interval = 10
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = "直 %downspeed%"
+label-disconnected=" 睊 no wifi"
+
+format-connected-padding= 1.5
+label-connected-padding=1
+format-disconnected-padding= 1.5
+label-disconnected-padding=1
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT1 
+adapter = ACAD
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+
+format-charging-padding= 1.5
+label-charging-padding=1
+format-discharging-padding= 1.5
+label-discharging-padding=1
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+
+[module/temperature]
+type = internal/temperature
+interval = 2
+format =  <label>
+format-padding= 1.5
+label-padding=1
+;format-background = #D56643
+;label-background = #D7795C	
+
+[module/date]
+type = internal/date
+format = <label>
+label = %time%
+time = %H:%M
+format-padding= 1.5
+label-padding=1
+;format-background = #D56643
+;label-background = #D7795C

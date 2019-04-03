@@ -1,0 +1,18 @@
+rofi.font: RobotoMono Nerd Font 12
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+#window {
+  orientation: horizontal;
+  children: [ cover, menu ];
+}
+
+#cover {
+  expand: false;
+  width: 232px;
+  border: 12px 0px 12px 12px;
+}
+
+#menu {
+  12px 12px 12px 0px;
+  fixed-height: 0;
+  padding: 10px 5px 10px 5px;
+}

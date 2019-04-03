@@ -1,0 +1,6 @@
+* {
+  spacing: 3px
+  padding: 10px
+}
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+rofi.font: RobotoMono Nerd Font 12

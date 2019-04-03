@@ -1,0 +1,4 @@
+cat << EOF > ~/.wallpaper
+#!/bin/bash
+hsetroot -cover "$2"
+EOF

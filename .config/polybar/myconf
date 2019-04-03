@@ -1,0 +1,368 @@
+[colors]
+kasumi = #D56643
+ran = #986B60
+aya = #CEA14F
+kokoron = #E0A459
+yukina = #907388
+white = #F0E6E4
+
+[fonts]
+font-0 = FontAwesome.otf:size=10;2
+font-1 = NotoSans-Regular:size=8;3
+font-2 = Hack Nerd Font:size=10.5;2	
+
+[bar/bar0]
+monitor = eDP-1
+fixed-center = false
+width = 10%
+height = 25
+offset-x = 0
+offset-y = 0
+
+background = ${colors.kasumi}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 0
+module-margin = 0
+
+modules-center = ewmh
+
+[bar/bar1]
+monitor = eDP-1
+fixed-center = false
+width = 11%
+height = 25
+offset-x = 9%
+offset-y = 0
+
+background = ${colors.aya}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 1
+module-margin = 12
+
+modules-center = volume
+
+[bar/musicbar]
+monitor = eDP-1
+fixed-center = false
+width = 14%
+height = 25
+offset-x = 18.9%
+offset-y = 0
+
+background = ${colors.yukina}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = Hack Nerd Font:size=14.5;2	
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 4
+module-margin = 1
+modules-left = music prev play stop next repeat
+
+[bar/bar2]
+monitor = eDP-1
+fixed-center = false
+width = 40%
+height = 25
+offset-x = 31.9%
+offset-y = 0
+
+background = ${colors.aya}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 1
+module-margin = 12
+
+modules-center = title
+
+[bar/turnoff]
+monitor = eDP-1
+fixed-center = false
+width = 3.7%
+height = 25
+offset-x = 96%
+offset-y = 0
+
+background = ${colors.kasumi}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = Hack Nerd Font:size=12.5;2	
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 0
+module-margin = 0
+
+modules-center = powermenu
+
+
+[bar/bar3]
+monitor = eDP-1
+fixed-center = true
+width = 12s%
+height = 25
+
+background = ${colors.kokoron}
+foreground = #393135
+
+offset-x = 70.9%
+offset-y = 0
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+topbar.border-top-size = 4
+
+padding = 1
+module-margin = 2
+
+modules-center = wireless-network
+
+[bar/bar4]
+monitor = eDP-1
+fixed-center = false
+width = 5.5%
+height = 25
+offset-x = 81.84%
+offset-y = 0
+
+background = ${colors.ran}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 1
+module-margin = 12
+
+modules-right = battery
+
+[bar/bar5]
+monitor = eDP-1
+fixed-center = false
+width = 5.7%
+height = 25
+offset-x = 86.3%
+offset- y = 0
+
+background = ${colors.yukina}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 1
+module-margin = 12
+
+modules-right = temperature
+
+[bar/bar6]
+monitor = eDP-1
+fixed-center = false
+width = 5.9%
+height = 25
+offset-x = 91.1%
+offset-y = 0
+
+background = ${colors.aya}
+foreground = #393135
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+border-size = 6
+border-left-size = 13
+border-color = #00000000
+
+padding = 1
+module-margin = 12
+
+modules-right = date
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = true
+format = <label-state>
+
+icon-0 = code;
+icon-1 = graphic;
+icon-2 = office;
+icon-3 = game;
+
+label-active = %icon%
+label-active-foreground = ${colors.white}
+label-active-background = ${colors.ran}
+label-active-padding = 2
+
+label-inactive = %icon%
+label-inactive-foreground = #393135
+label-inactive-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = #393135
+label-empty-padding = 2
+
+[module/volume]
+type = internal/pulseaudio
+format-volume = <ramp-volume> <label-volume> <bar-volume>
+format-muted = <label-muted> <bar-volume>
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+label-muted = ﱝ %percentage%
+
+bar-volume-width = 8
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-fill = ─
+bar-volume-empty = ─
+bar-volume-empty-foreground = ${colors.white}
+
+[module/title]
+type = internal/xwindow
+format-padding = 3
+label-empty = "No Window Active"
+label-maxlen = 70
+
+[module/wireless-network]
+type = internal/network
+interface = wlp9s0
+interval = 3.0
+ping-interval = 10
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = "直 %essid% %downspeed%"
+label-disconnected=" 睊 No wifi detected"
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT1 
+adapter = ACAD
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+
+[module/temperature]
+type = internal/temperature
+interval = 2
+format =  <label>
+
+[module/date]
+type = internal/date
+format =  <label>
+label = %time%
+time = %H:%M
+
+[module/music]
+type = custom/text
+content = "ﱘ"
+click-left = quodlibet --show-window
+click-right = quodlibet --hide-window
+
+[module/prev]
+type = custom/text
+content = "玲"
+click-left = quodlibet --force-previous
+
+[module/play]
+type = custom/text
+content = "懶"
+click-left = bash /home/rafif/.commands/start.sh&
+
+[module/stop]
+type = custom/text
+content = "栗"
+click-left = quodlibet --stop
+
+[module/next]
+type = custom/text
+content = "怜"
+click-left = quodlibet --next
+
+[module/repeat]
+type= custom/text
+content = "凌  咽"
+click-left = quodlibet --repeat=t
+
+[module/powermenu]
+type = custom/text
+content = " "
+content-padding = 1
+click-left = xfce4-session-logout
+
+[global/wm]
+margin-bottom = 5
+margin-top = 5
+
+
+

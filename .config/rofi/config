@@ -1,0 +1,5 @@
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+rofi.display-drun: 
+rofi.display-run: ❱
+rofi.show-icons: true
+rofi.font: RobotoMono Nerd Font 12

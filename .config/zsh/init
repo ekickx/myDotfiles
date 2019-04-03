@@ -1,0 +1,4 @@
+CONF_HOME=$HOME/.config/zsh
+source $CONF_HOME/aliases
+source $CONF_HOME/key-binding
+

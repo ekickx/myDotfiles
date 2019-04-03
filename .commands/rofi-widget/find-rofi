@@ -1,0 +1,5 @@
+while [[ ! `xdotool search --classname "rofi"` ]]
+do
+  : # ':' means pass
+done
+win_id=`xdotool search --classname "rofi"`
