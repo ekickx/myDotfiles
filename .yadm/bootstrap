@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Delete LICENSE file
+echo "Remove junk files"
+rm ~/LICENSE ~/README.md
+
 # Clone submodule
 
 # Install tmux plugins
