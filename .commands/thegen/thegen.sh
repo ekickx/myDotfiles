@@ -3,7 +3,7 @@
 if [ "$1" == "-w" ]
 then
   wal -e -t -i "$2"
-  source ~/.commands/thegen/wallpaper # Set Wallpaper
+  # source ~/.commands/thegen/wallpaper # Set Wallpaper
 fi
 
 # Import wal colors scheme
@@ -14,10 +14,12 @@ source $FILE
 term(){
   cat ~/.cache/wal/sequences
   cd ~/APP/st/
+  dunstify -r 2594 "Compiling st" &
   make clean install
 }
 tabbed(){
-  cd ~/APP/tabbed-0.6/
+  cd ~/APP/tabbed/
+  dunstify -r 2594 "Compiling tabbed" &
   make clean install
 }
 warnai(){
