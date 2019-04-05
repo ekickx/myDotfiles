@@ -3,7 +3,7 @@
 if [ "$1" == "-w" ]
 then
   wal -e -t -i "$2"
-  # source ~/.commands/thegen/wallpaper # Set Wallpaper
+  source ~/.commands/thegen/wallpaper # Set Wallpaper
 fi
 
 # Import wal colors scheme
@@ -30,6 +30,6 @@ source ~/.commands/thegen/tint2rc
 
 notify&
 bash ~/.cache/wal/telegram/wal-telegram # generate telegram theme
-warnai
 term
 tabbed
+warnai
