@@ -8,5 +8,5 @@ sudo apt install firmware-linux firmware-linux-free firmware-linux-nonfree firmw
 
 # Utility
 sudo apt install --no-install-recommends thunar
-sudo apt install gvfs thunar-archive-plugin tumbler-plugins-extra ffmpeg catfish
+sudo apt install gvfs-backends gvfs-fuse thunar-archive-plugin tumbler-plugins-extra ffmpeg catfish
 sudo apt install feh evince mpv imagemagick font-manager gimp inkscape
