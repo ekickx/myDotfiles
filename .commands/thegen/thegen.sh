@@ -23,7 +23,7 @@ tabbed(){
   make clean install
 }
 warnai(){
-  bash ~/APP/warnai/warnai -w -g fantome -ob mek-oes -xf vela # Generate gtk, openbox, xfce theme with "warnai"
+  bash ~/APP/warnai/warnai -w -g fantome -ob mek-oes -xf tetris # Generate gtk, openbox, xfce theme with "warnai"
 }
 source ~/.commands/thegen/notify #import notify
 source ~/.commands/thegen/tint2rc
