@@ -427,12 +427,7 @@
         <command>thunar</command>
       </action>
     </keybind>
-    <!-- <keybind key="Super_L"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>bash ~/.commands/rofi-widget/rofi-sidebar</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
-    <!-- Taking screenshot when Print is pressed -->
+     <!-- Taking screenshot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
         <command>bash ~/.commands/rofi-widget/screenshot.sh scr</command>
