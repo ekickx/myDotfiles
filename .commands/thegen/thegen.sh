@@ -12,9 +12,13 @@ source $FILE
 
 # Partial
 term(){
-  cat ~/.cache/wal/sequences
   cd ~/APP/st/
   dunstify -r 2594 "Compiling st" &
+  make clean install
+}
+dmenu(){
+  cd ~/APP/dmenu/
+  dunstify -r 2594 "Compiling dmenu" &
   make clean install
 }
 tabbed(){
@@ -23,7 +27,7 @@ tabbed(){
   make clean install
 }
 warnai(){
-  bash ~/APP/warnai/warnai -w -g fantome -ob mek-oes -xf tetris # Generate gtk, openbox, xfce theme with "warnai"
+  bash ~/APP/warnai/warnai -w -g fantome -ob mek-oes -xf pastel # Generate gtk, openbox, xfce theme with "warnai"
 }
 source ~/.commands/thegen/notify #import notify
 source ~/.commands/thegen/tint2rc
@@ -31,5 +35,6 @@ source ~/.commands/thegen/tint2rc
 notify&
 bash ~/.cache/wal/telegram/wal-telegram # generate telegram theme
 term
+dmenu
 tabbed
 warnai
