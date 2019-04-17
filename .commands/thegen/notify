@@ -1,7 +1,7 @@
 notify(){
 	cat << EOF
  [global]
-    font = RobotoMono Nerd Font 9
+    font = RobotoMono Nerd Font 10
 
     ### Display ###
 
@@ -34,7 +34,7 @@ notify(){
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
     #geometry = "270x50-19+50"
-    geometry = "272x50-19+24"
+    geometry = "303x80-19+24"
 
 
     # Show how many messages are currently hidden (because of geometry).
@@ -63,7 +63,7 @@ notify(){
     padding = 16
 
     # Horizontal padding.
-    horizontal_padding = 16
+    horizontal_padding = 14
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.

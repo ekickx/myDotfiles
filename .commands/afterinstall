@@ -6,7 +6,7 @@ sudo apt install openbox # install wm
 # Firmware
 sudo apt install firmware-linux firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-amd-graphics firmware-realtek intel-microcode
 
-# Utility
+# Gui
 sudo apt install --no-install-recommends thunar
-sudo apt install gvfs-backends gvfs-fuse thunar-archive-plugin tumbler-plugins-extra ffmpeg catfish
+sudo apt install thunar-archive-plugin tumbler-plugins-extra catfish
 sudo apt install feh evince mpv imagemagick font-manager gimp inkscape
