@@ -14,7 +14,6 @@ if [[ "$?" == 0 ]]; then # if there internet connection do
   yadm add ~/.config/openbox
   yadm add ~/.config/rofi
   yadm add ~/.config/Thunar
-  yadm add ~/.config/dunst
   yadm add ~/.config/polybar
   yadm add ~/.config/jgmenu
   yadm rm -r --cached ~/.config/jgmenu/backup

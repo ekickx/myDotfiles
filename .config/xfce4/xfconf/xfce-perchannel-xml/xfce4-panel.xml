@@ -23,7 +23,7 @@
         <value type="int" value="5"/>
         <value type="int" value="18"/>
       </property>
-      <property name="background-alpha" type="uint" value="100"/>
+      <property name="background-alpha" type="uint" value="87"/>
       <property name="background-style" type="uint" value="0"/>
       <property name="background-color" type="array">
         <value type="uint" value="3084"/>
