@@ -22,6 +22,7 @@ if [[ "$?" == 0 ]]; then # if there internet connection do
   yadm push -u origin master
 
   # Manage neovim config
+  cd ~/.config/nvim/
   git add -A
   git commit -m "daily commit"
   git push -u origin master
