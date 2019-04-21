@@ -99,6 +99,8 @@
     </property>
     <property name="plugin-16" type="string" value="statusnotifier">
       <property name="known-items" type="array">
+        <value type="string" value="MEGAsync"/>
+        <value type="string" value="persepolis"/>
         <value type="string" value="steam"/>
         <value type="string" value="Telegram Desktop"/>
         <value type="string" value="blueman"/>
@@ -107,6 +109,7 @@
       <property name="symbolic-icons" type="bool" value="true"/>
       <property name="mode-whitelist" type="bool" value="true"/>
       <property name="hidden-items" type="array">
+        <value type="string" value="persepolis"/>
       </property>
       <property name="square-icons" type="bool" value="false"/>
       <property name="menu-is-primary" type="bool" value="true"/>
