@@ -82,6 +82,7 @@
     <property name="plugin-10" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="telegram"/>
+        <value type="string" value="megasync"/>
         <value type="string" value="task manager"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="thunar"/>

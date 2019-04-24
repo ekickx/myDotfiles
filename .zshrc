@@ -29,7 +29,3 @@ zplug 'zsh-users/zsh-autosuggestions', from:github
 # finally install and load those plugins
 zplug check || zplug install
 zplug load
-
-# Path
-# export PATH=$PATH":$HOME/.commands"
-export PATH=$PATH":$HOME/.local/bin"
