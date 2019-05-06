@@ -29,4 +29,5 @@ if [[ "$?" == 0 ]]; then # if there internet connection do
 
   break # Stop infinite while loop
 fi
+sleep 20
 done

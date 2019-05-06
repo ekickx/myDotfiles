@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function send_notification {
+send_notification() {
     brightness=`lux -G | grep -o [0-9]*`
     # Make the bar with the special character ─ (it's not dash -)
     # https://en.wikipedia.org/wiki/Box-drawing_character

@@ -10,7 +10,7 @@
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="2"/>
+        <value type="int" value="4"/>
         <value type="int" value="13"/>
         <value type="int" value="7"/>
         <value type="int" value="12"/>
@@ -65,7 +65,6 @@
       <property name="style" type="uint" value="1"/>
     </property>
     <property name="plugin-1" type="string" value="battery"/>
-    <property name="plugin-2" type="string" value="whiskermenu"/>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="reverse-menu-order" type="bool" value="false"/>
@@ -108,12 +107,13 @@
       </property>
       <property name="single-row" type="bool" value="false"/>
       <property name="symbolic-icons" type="bool" value="true"/>
-      <property name="mode-whitelist" type="bool" value="true"/>
+      <property name="mode-whitelist" type="bool" value="false"/>
       <property name="hidden-items" type="array">
         <value type="string" value="persepolis"/>
       </property>
       <property name="square-icons" type="bool" value="false"/>
       <property name="menu-is-primary" type="bool" value="true"/>
     </property>
+    <property name="plugin-4" type="string" value="whiskermenu"/>
   </property>
 </channel>

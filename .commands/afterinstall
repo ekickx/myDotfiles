@@ -1,5 +1,14 @@
 #!/bin/bash
 
+before_reboot(){
+  user="`whoami`"
+  su
+  apt install sudo zsh
+  adduser $user sudo
+  chsh -s "`which zsh`" "`whoami`"
+}
+
+after_reboot(){
 # Add i386 architecture
 sudo dpkg --add-architecture i386 && sudo apt update
 
@@ -7,24 +16,28 @@ sudo dpkg --add-architecture i386 && sudo apt update
 sudo apt install firmware-linux firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-amd-graphics firmware-realtek intel-microcode \
 
 # Packages needed when login
-  lightdm-gtk-greeter-settings \ # install lightdm
-  openbox xfwm4 \ # install wm
+  lightdm-gtk-greeter-settings \ # Install lightdm
+  openbox xfwm4 \ # Install wm
 
 # Minimal Xfwm packages
-  xfce4-panel xfce4-whiskermenu-plugin xfce4-battery-plugin xfce4-pulseaudio-plugin xfce4-sntray-plugin \ # Panel
-  xfconf xfdesktop xfce4-session xfce4-settings xfce4-taskmanager # Core (except the taskmanager)
+  xfce4-panel xfce4-whiskermenu-plugin mugshot xfce4-battery-plugin xfce4-pulseaudio-plugin xfce4-sntray-plugin \ # Panel
+  xfconf xfdesktop xfce4-session xfce4-settings xfce4-taskmanager \ # Core, except the taskmanager
+
+# Openbox packages
+  obconf lxappearance lxrandr \ # Core
+  tint2 rofi
 
 # Gui
 sudo apt install --no-install-recommends thunar \ # File Manager
   libreoffice-writer libreoffice-calc; sudo apt install evince zathura \ # Office/Documents
   xarchiver thunar-archive-plugin tumbler-plugins-extra catfish \ # Make thunar cooler
-  font-manager gucharmap leafpad parcellite menulibre \ # Accessories
+  font-manager gucharmap leafpad parcellite menulibre blueman \ # Accessories
   gcolor2 imagemagick gimp inkscape \ # Graphics
   mpv audacious pavucontrol vokoscreen \ # Multimedia
   chromium firefox-esr deluge wicd-gtk synaptic \ # Internet
 
 # Has-no-Gui
-  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux zsh git yadm \ 
+  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm \ 
   libreoffice-gtk2 libreoffice-gtk3 \ # To make libreoffice can use gtk theme
   gvfs-backends gvfs-fuse \ # Very usefull packages that help provide file manager service: Trash system, mtp, dll
   gpg gnupg2 pass \ # For managing my passwords
@@ -34,3 +47,11 @@ sudo apt install --no-install-recommends thunar \ # File Manager
   libvulkan1 mesa-vulkan-drivers vulkan-utils \ # Standard vulkan library for my AMD graphics 
   libvkd3d1 dxvk \ # Vulkan-based Direct3D translation layer
   switcheroo-control # Enable to switch to my dedicated gpu (AMD)
+}
+
+case $1 in
+  bef)
+    before_reboot ;;
+  aft)
+    after_reboot ;;
+esac

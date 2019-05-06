@@ -1,6 +1,3 @@
-export ZPLUG_HOME=$HOME/.zplug
-setopt auto_cd
-
 # zplug initialization
 [[ ! -f $ZPLUG_HOME/init.zsh ]] && git clone https://github.com/zplug/zplug $ZPLUG_HOME
 source $ZPLUG_HOME/init.zsh
