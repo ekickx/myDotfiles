@@ -4,7 +4,11 @@
 echo "Remove junk files"
 rm ~/LICENSE ~/README.md
 
-# Clone submodule
+# Clone repos
+echo "Clone other repositories"
+git clone git@github.com:ekickx/Uzuki-MPV.git
+mkdir -p ~/App/builds/; cd ~/App/builds
+git clone git@github.com:ekickx/sss.git
 
 # Install tmux plugins
 echo "Setting up tmux"

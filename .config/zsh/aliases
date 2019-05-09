@@ -48,4 +48,10 @@ alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t'
 
 alias ps_mem='sudo ps_mem'
-alias cx='chmod+x'
+alias cx='chmod +x'
+
+# Function
+# Function for Search Command you ever typed
+sc(){
+  grep "$1" ~/.zsh_history | cut -d ";" -f 2
+}

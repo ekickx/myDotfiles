@@ -18,6 +18,7 @@ if [[ "$?" == 0 ]]; then # if there internet connection do
   yadm add ~/.config/jgmenu
   yadm rm -r --cached ~/.config/jgmenu/backup
   yadm add ~/.config/xfce4/xfconf/xfce-perchannel-xml
+  yadm add ~/.yadm/bootstrap
   yadm commit -m "daily commit"
   yadm push -u origin master
 
