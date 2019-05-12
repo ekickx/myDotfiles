@@ -35,6 +35,7 @@ alias p='cd ~/Pictures'
 alias dt='cd /mnt/DATA'
 
 # Git aliases
+alias s='git status'
 alias gi='git init'
 alias gcl='git clone --recursive'
 alias gr='git remote add origin'
@@ -49,6 +50,7 @@ alias tk='tmux kill-session -t'
 
 alias ps_mem='sudo ps_mem'
 alias cx='chmod +x'
+alias o='xdg-open'
 
 # Function
 # Function for Search Command you ever typed
