@@ -40,7 +40,8 @@ alias gi='git init'
 alias gcl='git clone --recursive'
 alias gr='git remote add origin'
 alias gp='git push'
-alias gc='git commit -a -m'
+alias gc='git commit -am'
+alias gd='git diff'
 
 # Tmux
 alias ta='tmux attach -t'
@@ -55,5 +56,5 @@ alias o='xdg-open'
 # Function
 # Function for Search Command you ever typed
 sc(){
-  grep "$1" ~/.zsh_history | cut -d ";" -f 2
+  cat ~/.zsh_history | cut -d ";" -f 2 | fzy
 }

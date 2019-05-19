@@ -8,7 +8,7 @@
         <property name="color1" type="empty"/>
         <property name="color2" type="empty"/>
         <property name="color-style" type="empty"/>
-        <property name="image-path" type="string" value="/home/ekickx/Pictures/Anime/Ao no Kanata no Four Rythm/Tobisawa.Misaki.full.2497298.jpg"/>
+        <property name="image-path" type="string" value="/home/ekickx/Pictures/Anime/Little_Witch_Academia/little_witch_academia_by_noerulb_daxhuq0.png"/>
         <property name="image-show" type="empty"/>
         <property name="last-image" type="empty"/>
         <property name="last-single-image" type="empty"/>
@@ -27,7 +27,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Ao no Kanata no Four Rythm/Tobisawa.Misaki.full.2497298.jpg"/>
+          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Little_Witch_Academia/little_witch_academia_by_noerulb_daxhuq0.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="1"/>
@@ -44,7 +44,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Ao no Kanata no Four Rythm/Kurashina.Asuka.full.2496481.jpg"/>
+          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Little_Witch_Academia/little_witch_academia_by_noerulb_daxhuq0.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="1"/>
@@ -61,7 +61,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Ao no Kanata no Four Rythm/Arisaka.Mashiro.full.2496413.jpg"/>
+          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Little_Witch_Academia/C2Ob4sBUUAA7MvQ.jpg"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="1"/>
@@ -78,7 +78,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Ao no Kanata no Four Rythm/Arisaka.Mashiro.full.2496405.jpg"/>
+          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Little_Witch_Academia/shiny_chariot__little_witch_academia__wallpaper_by_insanitykitsune_da9j9i0.png"/>
         </property>
         <property name="image-style" type="int" value="0"/>
         <property name="workspace4" type="empty">
@@ -96,7 +96,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Ao no Kanata no Four Rythm/Tobisawa.Misaki.full.2496558.jpg"/>
+          <property name="last-image" type="string" value="/home/ekickx/Pictures/Anime/Little_Witch_Academia/Shiny_Chariot_-_Vector-01.png"/>
         </property>
         <property name="workspace5" type="empty">
           <property name="color-style" type="int" value="1"/>

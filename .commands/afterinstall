@@ -21,8 +21,9 @@ sudo apt install firmware-linux firmware-linux-free firmware-linux-nonfree firmw
 
 # Minimal Xfwm packages
   xfce4-panel xfce4-whiskermenu-plugin mugshot xfce4-battery-plugin xfce4-pulseaudio-plugin xfce4-sntray-plugin \ # Panel
-  xfconf xfdesktop xfce4-session xfce4-settings xfce4-taskmanager \ # Core, except the taskmanager
-
+  xfconf xfdesktop xfce4-session xfce4-settings \ # Core
+  xfce4-taskmanager \
+  
 # Openbox packages
   obconf lxappearance lxrandr \ # Core
   tint2 rofi
@@ -38,7 +39,7 @@ sudo apt install --no-install-recommends thunar \ # File Manager
   glade \ # Development
 
 # Has-no-Gui
-  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm \ 
+  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm fzy \ 
   libreoffice-gtk2 libreoffice-gtk3 \ # To make libreoffice can use gtk theme
   gvfs-backends gvfs-fuse \ # Very usefull packages that help provide file manager service: Trash system, mtp, dll
   gpg gnupg2 pass \ # For managing my passwords

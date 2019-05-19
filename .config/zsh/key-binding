@@ -1,3 +1,6 @@
+autoload -U select-word-style
+select-word-style bash
+
 bindkey -e                                            # Use emacs key bindings
 
 bindkey -s '\el' 'ls\n'                               # [Alt-l] - run command: ls
@@ -51,6 +54,3 @@ fi
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
-# file rename magick
-bindkey "^[m" copy-prev-shell-word
