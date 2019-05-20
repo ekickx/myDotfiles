@@ -30,28 +30,12 @@
       <property name="Control_L" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Primary&gt;Print" type="string" value="bash /home/ekickx/.commands/rofi-widget/screenshot.sh area">
+      <property name="&lt;Primary&gt;Print" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="XF86AudioLowerVolume" type="string" value="bash /home/ekickx/.commands/volume.sh down"/>
-      <property name="XF86AudioRaiseVolume" type="string" value="bash /home/ekickx/.commands/volume.sh up"/>
-      <property name="XF86AudioMute" type="string" value="bash /home/ekickx/.commands/volume.sh mute"/>
-      <property name="XF86MonBrightnessUp" type="string" value="bash /home/ekickx/.commands/brightness.sh up"/>
-      <property name="XF86MonBrightnessDown" type="string" value="bash /home/ekickx/.commands/brightness.sh down"/>
-      <property name="&lt;Alt&gt;slash" type="string" value="skippy-xd --toggle-window-picker"/>
       <property name="&lt;Super&gt;s" type="string" value="/home/ekickx/.commands/center.sh"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;t" type="string" value="thunar"/>
-      <property name="&lt;Super&gt;Up" type="string" value="/home/ekickx/.commands/moveresize.sh 0 -15 0 0"/>
-      <property name="&lt;Super&gt;Down" type="string" value="/home/ekickx/.commands/moveresize.sh 0 15 0 0"/>
-      <property name="&lt;Super&gt;Right" type="string" value="/home/ekickx/.commands/moveresize.sh 15 0 0 0"/>
-      <property name="&lt;Super&gt;Left" type="string" value="/home/ekickx/.commands/moveresize.sh -15 0 0 0"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;Left" type="string" value="/home/ekickx/.commands/moveresize.sh 10 0 -20 0"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;Down" type="string" value="/home/ekickx/.commands/moveresize.sh 0 -10 0 20"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;Up" type="string" value="/home/ekickx/.commands/moveresize.sh 0 10 0 -20"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;Right" type="string" value="/home/ekickx/.commands/moveresize.sh -10 0 20 0"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Super_L" type="string" value="xfce4-popup-whiskermenu"/>
-      <property name="&lt;Super&gt;t" type="string" value="tabbed -c -r 2 st -w &apos;&apos;"/>
-      <property name="Print" type="string" value="bash /home/ekickx/.commands/rofi-widget/screenshot.sh scr">
+      <property name="Print" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
     </property>

@@ -51,10 +51,16 @@ alias tk='tmux kill-session -t'
 
 alias ps_mem='sudo ps_mem'
 alias cx='chmod +x'
-alias o='xdg-open'
 
 # Function
 # Function for Search Command you ever typed
 sc(){
   cat ~/.zsh_history | cut -d ";" -f 2 | fzy
 }
+e(){
+  du -a --exclude='.git' ~/.commands ~/.config | awk '{print $2}' | fzy | xargs -r nvim
+}
+o(){
+  du -a --exclude='./.*' . | awk '{print $2}' | fzy | xargs -r xdg-open
+}
+

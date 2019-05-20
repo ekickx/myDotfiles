@@ -392,52 +392,6 @@
     <!--     <command>kfmclient openProfile filemanagement</command> -->
     <!--   </action> -->
     <!-- </keybind> -->
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>bash ~/.commands/volume.sh down</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioMute">
-      <action name="Execute">
-        <command>bash ~/.commands/volume.sh mute</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>bash ~/.commands/volume.sh up</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessUp">
-      <action name="Execute">
-        <command>bash ~/.commands/brightness.sh up</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-        <command>bash ~/.commands/brightness.sh down</command>
-      </action>
-    </keybind>
-    <keybind key="W-t">
-      <action name="Execute">
-        <command>tabbed -c -r 2 st -w ''</command>
-      </action>
-    </keybind>
-    <keybind key="W-S-t">
-      <action name="Execute">
-        <command>thunar</command>
-      </action>
-    </keybind>
-     <!-- Taking screenshot when Print is pressed -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>bash ~/.commands/rofi-widget/screenshot.sh scr</command>
-      </action>
-    </keybind>
-    <keybind key="C-Print">
-      <action name="Execute">
-        <command>bash ~/.commands/rofi-widget/screenshot.sh area</command>
-      </action>
-    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
