@@ -4,6 +4,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
+
 alias -g ...='../..'
 alias -g ....='../../..'
 
@@ -56,9 +57,6 @@ alias cx='chmod +x'
 # Function for Search Command you ever typed
 sc(){
   cat ~/.zsh_history | cut -d ";" -f 2 | fzy
-}
-e(){
-  du -a --exclude={.git,~/.config/nvim/backup/,~/.config/nvim/undodir/} ~/.commands ~/.config | awk '{print $2}' | fzy | xargs -r nvim
 }
 o(){
   du -a --exclude='./.*' . | awk '{print $2}' | fzy | xargs -r xdg-open

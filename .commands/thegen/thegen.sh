@@ -12,25 +12,25 @@ source $FILE
 
 # Partial
 term(){
-  cd ~/APP/st/
+  cd $ST
   dunstify -r 2594 "Compiling st" &
   make clean install
 }
 dmenu(){
-  cd ~/APP/dmenu/
+  cd $DMENU
   dunstify -r 2594 "Compiling dmenu" &
   make clean install
 }
 tabbed(){
-  cd ~/APP/tabbed/
+  cd $TABBED
   dunstify -r 2594 "Compiling tabbed" &
   make clean install
 }
 warnai(){
-  bash ~/APP/warnai/warnai -w -g fantome -ob mek-oes -xf pastel # Generate gtk, openbox, xfce theme with "warnai"
+  warnai -w -g fantome -ob mek-oes -xf black-paha # Generate gtk, openbox, xfce theme with "warnai"
 }
-source ~/.commands/thegen/notify #import notify
-source ~/.commands/thegen/tint2rc
+source ~/.commands/thegen/notify #import notify script
+source ~/.commands/thegen/tint2rc #import tint2 panel script
 
 notify&
 bash ~/.cache/wal/telegram/wal-telegram # generate telegram theme
