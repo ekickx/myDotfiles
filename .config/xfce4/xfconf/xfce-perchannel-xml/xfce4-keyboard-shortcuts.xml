@@ -33,11 +33,11 @@
       <property name="&lt;Primary&gt;Print" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Super&gt;s" type="string" value="/home/ekickx/.commands/center.sh"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="Print" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="&lt;Super&gt;s" type="string" value="/home/ekickx/.commands/center"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

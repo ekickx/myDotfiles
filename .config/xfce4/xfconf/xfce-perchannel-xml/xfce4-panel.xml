@@ -80,13 +80,14 @@
     </property>
     <property name="plugin-10" type="string" value="systray">
       <property name="names-visible" type="array">
-        <value type="string" value="telegram"/>
+        <value type="string" value="thunar"/>
+        <value type="string" value="redshift-gtk"/>
         <value type="string" value="megasync"/>
         <value type="string" value="task manager"/>
-        <value type="string" value="blueman-applet"/>
-        <value type="string" value="thunar"/>
         <value type="string" value="wicd-client.py"/>
+        <value type="string" value="blueman-applet"/>
         <value type="string" value="parcellite"/>
+        <value type="string" value="telegram"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-hidden" type="array">
@@ -99,6 +100,7 @@
     </property>
     <property name="plugin-16" type="string" value="statusnotifier">
       <property name="known-items" type="array">
+        <value type="string" value="redshift"/>
         <value type="string" value="MEGAsync"/>
         <value type="string" value="persepolis"/>
         <value type="string" value="steam"/>

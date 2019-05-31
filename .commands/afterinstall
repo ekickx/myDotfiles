@@ -32,14 +32,14 @@ sudo apt install firmware-linux firmware-linux-free firmware-linux-nonfree firmw
 sudo apt install --no-install-recommends thunar \ # File Manager
   libreoffice-writer libreoffice-calc; sudo apt install evince zathura \ # Office/Documents
   xarchiver thunar-archive-plugin tumbler-plugins-extra catfish \ # Make thunar cooler
-  font-manager gucharmap leafpad parcellite menulibre blueman \ # Accessories
+  font-manager gucharmap leafpad parcellite menulibre blueman redshift-gtk \ # Accessories
   gcolor2 imagemagick gimp inkscape \ # Graphics
   mpv audacious pavucontrol vokoscreen \ # Multimedia
   chromium firefox-esr deluge wicd-gtk synaptic \ # Internet
   glade \ # Development
 
 # Has-no-Gui
-  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm fzy \ 
+  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm fzy wmctrl \ 
   libreoffice-gtk2 libreoffice-gtk3 \ # To make libreoffice can use gtk theme
   gvfs-backends gvfs-fuse \ # Very usefull packages that help provide file manager service: Trash system, mtp, dll
   gpg gnupg2 pass \ # For managing my passwords

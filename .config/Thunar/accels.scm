@@ -1,4 +1,4 @@
-; Thunar GtkAccelMap rc-file         -*- scheme -*-
+; thunar GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/ThunarLauncher/sendto-desktop" "")
@@ -9,7 +9,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-home" "<Alt>Home")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open" "<Primary>o")
-; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1555346920072209-2" "")
 ; (gtk_accel_path "<Actions>/ThunarShortcutsPane/sendto-shortcuts" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-file-system" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/switch-next-tab" "<Primary>Page_Down")
@@ -31,7 +30,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-tree" "<Primary>e")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/restore" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-network" "")
-; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1555346920072499-10" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/new-tab" "<Primary>t")
 ; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1555346920072182-1" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/preferences" "")
@@ -47,7 +45,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-as-icons" "<Primary>1")
 ; (gtk_accel_path "<Actions>/ThunarWindow/new-window" "<Primary>n")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/forward" "<Alt>Right")
-; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1555346920072445-9" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/move-to-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/select-by-pattern" "<Primary>s")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/duplicate" "")
@@ -78,7 +75,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/close-window" "<Primary>q")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/select-all-files" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-ascending" "")
-; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1555346920072920-20" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-mtime" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-location" "<Primary>l")
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-in-alt" "<Primary>equal")

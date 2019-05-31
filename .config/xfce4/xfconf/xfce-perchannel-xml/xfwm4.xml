@@ -32,7 +32,7 @@
     <property name="mousewheel_rollup" type="bool" value="true"/>
     <property name="move_opacity" type="int" value="100"/>
     <property name="placement_mode" type="string" value="center"/>
-    <property name="placement_ratio" type="int" value="46"/>
+    <property name="placement_ratio" type="int" value="54"/>
     <property name="popup_opacity" type="int" value="100"/>
     <property name="prevent_focus_stealing" type="bool" value="false"/>
     <property name="raise_delay" type="int" value="250"/>
@@ -61,7 +61,7 @@
     <property name="title_alignment" type="string" value="center"/>
     <property name="title_font" type="string" value="Sans Bold 0"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
-    <property name="titleless_maximize" type="bool" value="false"/>
+    <property name="titleless_maximize" type="bool" value="true"/>
     <property name="title_shadow_active" type="string" value="false"/>
     <property name="title_shadow_inactive" type="string" value="false"/>
     <property name="title_vertical_offset_active" type="int" value="0"/>

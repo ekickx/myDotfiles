@@ -30,7 +30,6 @@ warnai(){
   warnai -w -g fantome -ob mek-oes -xf black-paha # Generate gtk, openbox, xfce theme with "warnai"
 }
 source ~/.commands/thegen/notify #import notify script
-source ~/.commands/thegen/tint2rc #import tint2 panel script
 
 notify&
 bash ~/.cache/wal/telegram/wal-telegram # generate telegram theme
