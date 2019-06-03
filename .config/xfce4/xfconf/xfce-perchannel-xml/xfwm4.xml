@@ -86,9 +86,9 @@
       <value type="string" value="6"/>
       <value type="string" value="7"/>
     </property>
-    <property name="margin_left" type="int" value="12"/>
-    <property name="margin_right" type="int" value="12"/>
-    <property name="margin_bottom" type="int" value="44"/>
-    <property name="margin_top" type="int" value="12"/>
+    <property name="margin_left" type="int" value="0"/>
+    <property name="margin_right" type="int" value="0"/>
+    <property name="margin_bottom" type="int" value="0"/>
+    <property name="margin_top" type="int" value="0"/>
   </property>
 </channel>

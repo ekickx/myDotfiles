@@ -19,4 +19,3 @@ dmenu(){
 dmenu &
 source ~/.commands/rofi-widget/find-rofi # Find rofi id
 transset -i $win_id 1
-
