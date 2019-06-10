@@ -1,11 +1,11 @@
 #!/bin/bash
 
 before_reboot(){
-  user="`whoami`"
+  user="$(whoami)"
   su
   apt install sudo zsh
   adduser $user sudo
-  chsh -s "`which zsh`" $user
+  chsh -s "$(which zsh)" "$user"
 }
 
 after_reboot(){

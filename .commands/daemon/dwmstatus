@@ -1,0 +1,8 @@
+#!/bin/bash
+while true
+do
+  DATETIME=`date`
+  BATTERYSTATE=$( acpi --battery | grep -o '[0-9]*' | head -n 2 | tail -n 1 )
+  xsetroot -name "${BATTERYSTATE}% "
+  sleep 1m
+done

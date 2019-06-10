@@ -27,7 +27,7 @@
             <value type="uint" value="65535"/>
           </property>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ekickx/Pictures/Wallpapers/norali-emilio-1178277-unsplash.jpg"/>
+          <property name="last-image" type="string" value="/home/ekickx/Pictures/Wallpapers/proxy.duckduckgo.com.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="1"/>
@@ -154,7 +154,8 @@
         </property>
       </property>
     </property>
-    <property name="single-workspace-mode" type="bool" value="false"/>
+    <property name="single-workspace-mode" type="bool" value="true"/>
+    <property name="single-workspace-number" type="int" value="0"/>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="show-tooltips" type="bool" value="true"/>

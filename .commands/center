@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Init Var
-eval $(xdotool getdisplaygeometry --shell)
+eval "$(xdotool getdisplaygeometry --shell)"
 WINW=802
 WINH=458
 panelSize=0
 
-if [[ `pgrep -x xfce4-panel` ]]; then
+if [[ $(pgrep -x xfce4-panel) ]]; then
   panelSize=$(xfconf-query -c xfce4-panel -p /panels/panel-1 -lv | grep size | grep -o '[0-9]*' | tail -1)
 fi
 
