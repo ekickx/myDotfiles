@@ -1,8 +1,14 @@
 #!/bin/bash
 while true
 do
-  DATETIME=`date`
-  BATTERYSTATE=$( acpi --battery | grep -o '[0-9]*' | head -n 2 | tail -n 1 )
-  xsetroot -name "${BATTERYSTATE}% "
+  DATETIME=$(date "+ %a %d,%b %H:%M")
+  BATTERYSTATE=$(acpi --battery | grep -o '[0-9]*' | head -n 2 | tail -n 1)
+  if [[ "$(wicd-cli -y -i | grep status | cut -d " " -f 3)" == "Connected" ]]; then
+    WIFI="說 $(wicd-cli -y -d | grep Essid | cut -d " " -f 2) "
+  else
+    WIFI="not connect "
+  fi
+
+  xsetroot -name "$WIFI  $BATTERYSTATE ${DATETIME}"
   sleep 1m
 done

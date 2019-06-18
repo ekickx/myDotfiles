@@ -128,9 +128,9 @@
       <name>3</name>
       <name>4</name>
       <name>5</name>
-      <name>6</name>
-      <name>7</name>
-      <name>8</name>
+      <name></name>
+      <name></name>
+      <name></name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -158,8 +158,8 @@
      cases. -->
   <margins>
     <top>12</top>
-    <bottom>30</bottom>
-    <left>52</left>
+    <bottom>12</bottom>
+    <left>12</left>
     <right>12</right>
   </margins>
   <dock>

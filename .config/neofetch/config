@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# config=~/.config/neofetch/semi-minimal
+config=~/.config/neofetch/minimal
+# config=~/.config/neofetch/pixel
+
+source $config
