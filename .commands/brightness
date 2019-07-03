@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 send_notification() {
   brightness=$(lux -G | grep -o '[0-9]*')

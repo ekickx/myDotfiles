@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dmenu(){
   choice=$(echo -e " Save\n Copy\n Cancel" | rofi \
@@ -29,5 +29,7 @@ if [[ $# = 0 ]]; then
     echo "No screenshot area has been specified. Screenshot not taken."
 fi
 dmenu&
-source ~/.commands/rofi-widget/find-rofi # Find rofi id
-transset -i $win_id 1
+if [[ `pgrep -x compton` ]]; then
+  source ~/.commands/rofi-widget/find-rofi # Find rofi id
+  transset -i $win_id 1
+fi

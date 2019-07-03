@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dmenu(){
   choice=$(echo -e "⏻ Shutdown\n Reboot\n⏾ Sleep\n Logout" | rofi \
@@ -17,5 +17,7 @@ dmenu(){
   esac
 }
 dmenu &
-source ~/.commands/rofi-widget/find-rofi # Find rofi id
-transset -i $win_id 1
+if [[ `pgrep -x compton` ]]; then
+  source ~/.commands/rofi-widget/find-rofi # Find rofi id
+  transset -i $win_id 1
+fi

@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env dash
 
 before_reboot(){
   user="$(whoami)"
   su
   apt install sudo zsh
-  adduser $user sudo
+  adduser "$user" sudo
   chsh -s "$(which zsh)" "$user"
 }
 
@@ -39,7 +39,7 @@ sudo apt install --no-install-recommends thunar \ # File Manager
   glade \ # Development
 
 # Has-no-Gui
-  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm fzy wmctrl \ 
+  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm fzy wmctrl \
   libreoffice-gtk2 libreoffice-gtk3 \ # To make libreoffice can use gtk theme
   gvfs-backends gvfs-fuse \ # Very usefull packages that help provide file manager service: Trash system, mtp, dll
   gpg gnupg2 pass \ # For managing my passwords

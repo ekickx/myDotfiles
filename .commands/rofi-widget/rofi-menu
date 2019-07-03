@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 rofi -modi drun \
 -lines 10 \
@@ -8,6 +8,7 @@ rofi -modi drun \
 -scroll-method 1 \
 -show drun &
 
-source ~/.commands/rofi-widget/find-rofi
-
-transset -i $win_id 1
+if [[ pgrep -x compton ]]; then
+  source ~/.commands/rofi-widget/find-rofi
+  transset -i $win_id 1
+fi
