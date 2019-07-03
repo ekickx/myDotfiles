@@ -1,0 +1,9 @@
+#!/bin/dash
+
+# Init Var
+eval "$(xdotool getdisplaygeometry --shell)"
+width=500
+height=27
+y=35
+
+dmenu_run -i -b -x "$(($WIDTH/2 - $width/2))" -y "$y" -w "$width" -h "$height" -p ' '
