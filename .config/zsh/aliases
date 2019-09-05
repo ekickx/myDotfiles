@@ -54,6 +54,10 @@ alias ps_mem='sudo ps_mem'
 alias cx='chmod +x'
 alias diff='diff --color'
 
+alias vim='nvim'
+alias spicetify='~/Applications/exec/spicetify/spicetify'
+alias warnai='~/Applications/exec/warnai/warnai'
+
 # Function
 # Function for Search Command you ever typed
 sc(){
@@ -61,4 +65,8 @@ sc(){
 }
 o(){
   du -a --exclude='./.*' . | awk '{print $2}' | fzy | xargs -r xdg-open
+}
+# Dnf
+dnf(){
+  if [[ $@ == 'search' ]]; then command dnf -C search; fi
 }
