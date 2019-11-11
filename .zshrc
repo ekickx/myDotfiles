@@ -1,6 +1,6 @@
 # zplug initialization
-[[ ! -f $ZPLUG_HOME/init.zsh ]] && git clone https://github.com/zplug/zplug $ZPLUG_HOME
-source $ZPLUG_HOME/init.zsh
+[[ ! -f $HOME/.zplug/init.zsh ]] && git clone https://github.com/zplug/zplug $HOME/.zplug
+source $HOME/.zplug/init.zsh
 
 #do self-manage
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
