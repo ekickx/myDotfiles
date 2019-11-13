@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# I take this script from Anachron's i3blocks
+# I only slightly modify this script to add an option to show icon
+# I also remove the i3blocks specify script
+# To make this works with tint2 executor, polybar custom script, dzen2 feeder, conkybar, lemonbar feeder, dunst notify, etc.
+# 'weather -i' = with icon, 'weather' = text only
+# Cheers!
+# Addy
+
+# Open Weather Map API code, register to http://openweathermap.org to get one ;)
+API_KEY="9cbdf27eb8391849bc039df50af7bbb2"
+
+# Check on http://openweathermap.org/find
+CITY_ID="1642414"
+
+TEXT_SUNNY="Clear"
+TEXT_CLOUDY="Cloudy"
+TEXT_RAINY="Rainy"
+TEXT_STORM="Storm"
+TEXT_SNOW="Snow"
+TEXT_FOG="Fog"
+
+SYMBOL_CELSIUS="˚C"
+
+WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=${API_KEY}&units=metric"
+
+if [[ ! -e /tmp/weather ]]; then
+  wget -qO /tmp/weather "${WEATHER_URL}"
+fi
+WEATHER_INFO=$(cat /tmp/weather)
+WEATHER_MAIN=$(echo "${WEATHER_INFO}" | grep -o -e '\"main\":\"[A-Za-z]*\"' | awk -F ':' '{print $2}' | tr -d '"')
+WEATHER_TEMP=$(echo "${WEATHER_INFO}" | grep -o -e '\"temp\":\-\?[0-9]*' | awk -F ':' '{print $2}' | tr -d '"')
+
+if [[ "${WEATHER_MAIN}" = *Snow* ]]; then
+  echo "${TEXT_SNOW} ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
+elif [[ "${WEATHER_MAIN}" = *Rain* ]] || [[ "${WEATHER_MAIN}" = *Drizzle* ]]; then
+  echo "It's ${TEXT_RAINY} today with temperature around ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
+elif [[ "${WEATHER_MAIN}" = *Cloud* ]]; then
+  echo "Today is ${TEXT_CLOUDY} with temperature around ${WEATHER_TEMP}${SYMBOL_CELSIUS}. Dont forget to bring your umbrella \uf0e9"
+elif [[ "${WEATHER_MAIN}" = *Clear* ]]; then
+  echo "${TEXT_SUNNY} ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
+elif [[ "${WEATHER_MAIN}" = *Fog* ]] || [[ "${WEATHER_MAIN}" = *Mist* ]]; then
+  echo "${TEXT_FOG} ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
+else
+  echo "${WEATHER_MAIN} ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
+fi

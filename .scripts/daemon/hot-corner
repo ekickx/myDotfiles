@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xdotool behave_screen_edge --delay 0 --quiesce 100 bottom exec --sync ~/.commands/rofi-widget/info

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+while : ; do  # Do infinite while loop
+wget --spider --quiet http://google.com
+
+if [[ "$?" == 0 ]]; then # if there internet connection do
+  # Manage dotfiles with yadm
+  yadm add ~/.commands
+  yadm commit -am "daily commit"
+  yadm push -u origin master
+
+  # Manage neovim config
+  cd ~/.config/nvim/
+  git commit -am "daily commit"
+  git push -u origin master
+
+  break # Stop infinite while loop
+fi
+sleep 20
+done

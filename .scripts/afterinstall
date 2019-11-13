@@ -1,0 +1,64 @@
+#!/usr/bin/env dash
+
+before_reboot(){
+  user="$(whoami)"
+  su
+  apt install sudo zsh
+  adduser "$user" sudo
+  chsh -s "$(which zsh)" "$user"
+}
+
+after_reboot(){
+# Add i386 architecture
+sudo dpkg --add-architecture i386 && sudo apt update
+
+# Firmware
+sudo apt install firmware-linux firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-amd-graphics firmware-realtek intel-microcode \
+
+# Packages needed when login
+  lightdm-gtk-greeter-settings \ # Install lightdm
+  openbox xfwm4 \ # Install wm
+
+# Minimal Xfwm packages
+  xfce4-panel xfce4-whiskermenu-plugin mugshot xfce4-battery-plugin xfce4-pulseaudio-plugin xfce4-sntray-plugin \ # Panel
+  xfconf xfdesktop xfce4-session xfce4-settings \ # Core
+  xfce4-taskmanager \
+  
+# Openbox packages
+  obconf lxappearance lxrandr \ # Core
+  tint2 rofi
+
+# Gui
+sudo apt install --no-install-recommends thunar \ # File Manager
+  libreoffice-writer libreoffice-calc; sudo apt install evince zathura \ # Office/Documents
+  xarchiver thunar-archive-plugin tumbler-plugins-extra catfish \ # Make thunar cooler
+  font-manager gucharmap leafpad parcellite menulibre blueman redshift-gtk \ # Accessories
+  gcolor2 imagemagick gimp inkscape \ # Graphics
+  mpv audacious pavucontrol vokoscreen \ # Multimedia
+  chromium firefox-esr deluge wicd-gtk synaptic \ # Internet
+  glade \ # Development
+
+# Has-no-Gui
+  ffmpeg hsetroot pulseaudio alsa-utils compton zenity lxpolkit maim xcape tmux git yadm fzy wmctrl \
+  libreoffice-gtk2 libreoffice-gtk3 \ # To make libreoffice can use gtk theme
+  gvfs-backends gvfs-fuse \ # Very usefull packages that help provide file manager service: Trash system, mtp, dll
+  gpg gnupg2 pass \ # For managing my passwords
+  # Development
+  build-essential fakeroot devscripts \ # For Debian package
+  make ninja-build cmake meson \ # Build tools. More info, see: https://en.wikipedia.org/wiki/List_of_build_automation_software
+  python-pip python3-pip pipenv virtualenv python-virtualenv python3-virtualenv \ # Python
+  gir1.2-gtk-2.0 gir1.2-gtk-3.0 \ # GIR is GObject Introspection Repository
+
+# Gaming Purpose
+  steam \ # Ofcourse steam launcher must be isntalled
+  libvulkan1 mesa-vulkan-drivers vulkan-utils \ # Standard vulkan library for my AMD graphics 
+  libvkd3d1 dxvk \ # Vulkan-based Direct3D translation layer
+  switcheroo-control # Enable to switch to my dedicated gpu (AMD)
+}
+
+case $1 in
+  bef)
+    before_reboot ;;
+  aft)
+    after_reboot ;;
+esac

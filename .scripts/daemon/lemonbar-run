@@ -1,0 +1,3 @@
+#!/bin/dash
+xset +fp ~/.local/share/fonts/misc
+conky | lemonbar -f "-*-rissole-*" -f "-*-waffle-*" -g x28 -B "#141c21" -F "#93a1a1" | sh

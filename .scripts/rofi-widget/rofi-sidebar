@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Init var
+width=478
+panel_width=25
+speed=25
+
+# Run rofi in background
+rofi -sidebar-mode \
+-modi drun \
+-lines 30 \
+-padding 18 \
+-width 35 \
+-location 1 \
+-xoffset 40 \
+-scroll-method 1 \
+-show drun &
+
+source ~/.commands/rofi-widget/find-rofi # Find rofi id
+
+# Slide Rofi
+xdotool windowmove --relative "$win_id" -"$(($width - $panel_width))" 0
+transset -i $win_id 1
+for ((i=$speed; i<="$(($width - $panel_width))"; i+=$speed)); do
+  xdotool windowmove --relative "$win_id" $speed 0
+  sleep 0.01
+done

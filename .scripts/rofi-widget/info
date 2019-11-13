@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Messsages
+weather=$(echo -e "\ue302 Weather\n`weather`")
+song(){
+  if [[ `xdotool search --classname "spotify"` ]]; then
+   title=`dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | sed -n '/title/{n;p}' | cut -d '"' -f 2`
+   artist=`dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | sed -n '/artist/{n;n;p}' | cut -d '"' -f 2`
+   song=`echo -e "\uf001 Playing song\n"$title" by "$artist""`
+  else
+    song=$(echo -e "\uf001 No playing song")
+  fi
+}
+wiki(){
+  if [[ ! -e /tmp/wiki ]]; then
+    wget "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&explaintext&redirects=1&titles=Wikipedia:Recent additions" -qO /tmp/wiki
+  fi
+  content=$(echo -e `cat /tmp/wiki` | grep "... that" | head -n "`shuf -i 3-15 -n 1`" | tail -n 1)
+	wiki=$(echo -e "\uf128 Did you know ... \n$content")
+}
+
+song
+wiki
+message=$(echo -e "$weather\n""\n$song\n""\n$wiki")
+
+# Run rofi message in background
+rofi -e "$message" -width 53 -location 6 -config ~/.config/rofi/info &
+
+source ~/.commands/rofi-widget/find-rofi # Find rofi id
+
+# Slide Rofi
+speed=10
+height=`xwininfo -id "$(printf 0x%x "$win_id")" \
+  | grep geometry | grep -o '[0-9]*'\
+  | head -n 2 | tail -n 1`
+
+xdotool windowmove --relative "$win_id" 0 "$height"
+transset -i "$win_id" 1
+for ((i=$speed; i<=$height; i+=$speed)); do
+  xdotool windowmove --relative "$win_id" 0 -"$speed"
+  sleep 0.001
+done
