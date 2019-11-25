@@ -6,19 +6,19 @@ super + t
 
 # Volume and Brightness
 XF86MonBrightness{Up,Down}
-  ~/.commands/brightness {up,down}
+  ~/.scripts/brightness {up,down}
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-  ~/.commands/volume {mute,up,down}
+  ~/.scripts/volume {mute,up,down}
 
 # Daemon/Background process
 {_,ctrl + }Print
-  ~/.commands/rofi-widget/screenshot {scr,area}
+  ~/.scripts/rofi-widget/screenshot {scr,area}
 alt + slash
   skippy-xd --toggle-window-picker
 super + p
   clipmenu
 super + space
-  ~/.commands/dmenu-scripts/dmenu_run
+  ~/.scripts/dmenu-scripts/dmenu_run
 
 # Reload sxhkd config
 super + Delete
@@ -29,7 +29,7 @@ super + Delete
 # Super + right/left arrow key = Expand/shrink window to left & right by 3 pixel
 # Super + up/down arrow key = Expand/shrink window up & down by 3 pixel
 super + {_,shift + }{Up,Down,Left,Right}
-  ~/.commands/moveresize {0 -5 0 0,0 -3 0 6,0 5 0 0,0 3 0 -6,-5 0 0 0,3 0 -6 0,5 0 0 0,-3 0 6 0}
+  ~/.scripts/moveresize {0 -5 0 0,0 -3 0 6,0 5 0 0,0 3 0 -6,-5 0 0 0,3 0 -6 0,5 0 0 0,-3 0 6 0}
 
 super + s
-  ~/.commands/center
+  ~/.scripts/center
