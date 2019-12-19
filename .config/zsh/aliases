@@ -58,6 +58,8 @@ alias vim='nvim'
 alias spicetify='~/Applications/exec/spicetify/spicetify'
 alias warnai='~/Applications/exec/warnai/warnai'
 
+alias dot-config='/usr/bin/git --git-dir=$HOME/Projects/Dotfiles/ --work-tree=$HOME'
+
 # Function
 # Function for Search Command you ever typed
 sc(){
