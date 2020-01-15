@@ -1,6 +1,3 @@
-~/.wallpaper &
-tint2 &
-# tint2 -c ~/.config/tint2/launchy.tint2rc &
-# tint2 -c ~/.config/tint2/unleashed-workspace.tint2rc &
-# tint2 -c ~/.config/tint2/minima.tint2rc &
-compton &
+~/.feh &
+tint2 &disown
+# compton &disown
