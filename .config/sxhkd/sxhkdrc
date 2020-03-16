@@ -18,7 +18,7 @@ alt + slash
 super + p
   clipmenu
 super + space
-  ~/.scripts/dmenu-scripts/dmenu_run
+  rofi -show drun
 
 # Reload sxhkd config
 super + Delete
@@ -30,6 +30,8 @@ super + Delete
 # Super + up/down arrow key = Expand/shrink window up & down by 3 pixel
 super + {_,shift + }{Up,Down,Left,Right}
   ~/.scripts/moveresize {0 -5 0 0,0 -3 0 6,0 5 0 0,0 3 0 -6,-5 0 0 0,3 0 -6 0,5 0 0 0,-3 0 6 0}
+ctrl + alt + {Right,Left}
+  xdotool set_desktop --relative {1, -- -1}
 
 super + s
   ~/.scripts/center
