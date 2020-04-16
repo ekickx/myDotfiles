@@ -18,7 +18,9 @@ alt + slash
 super + p
   clipmenu
 super + space
-  rofi -show drun
+  rofi -modi 'drun' -show drun
+super + Return
+  rofi -modi 'emoji:~/.scripts/rofi-widget/rofiemoji.sh' -show emoji
 
 # Reload sxhkd config
 super + Delete
@@ -35,3 +37,11 @@ ctrl + alt + {Right,Left}
 
 super + s
   ~/.scripts/center
+
+#
+# Bspwm
+#
+
+# Close window
+alt + F4
+  bspc node -c

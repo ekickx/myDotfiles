@@ -323,5 +323,5 @@ notify(){
 # vim: ft=cfg
 
 EOF
-  bash ~/.commands/daemon/dunst-restart
+  bash ~/.scripts/daemon/dunst-restart
 } > ~/.config/dunst/dunstrc

@@ -3,7 +3,7 @@
 if [ "$1" == "-w" ]
 then
   wal -e -t -i "$2"
-  source ~/.commands/thegen/wallpaper # Set Wallpaper
+  source ~/.scripts/thegen/wallpaper # Set Wallpaper
 fi
 
 # Import wal colors scheme
@@ -29,7 +29,7 @@ tabbed(){
 warnai(){
   warnai -w -g fantome -ob mek-oes -xf black-paha # Generate gtk, openbox, xfce theme with "warnai"
 }
-source ~/.commands/thegen/notify #import notify script
+source ~/.scripts/thegen/notify #import notify script
 
 notify&
 bash ~/.cache/wal/telegram/wal-telegram # generate telegram theme
