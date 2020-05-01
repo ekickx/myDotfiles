@@ -1,3 +1,4 @@
-~/.feh &
-tint2 &disown
-# compton &disown
+~/.fehbg &
+tint2 &
+~/.scripts/daemon/battery_monitor &
+picom &
