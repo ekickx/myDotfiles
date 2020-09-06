@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/env bash
 
 # You can call this script like this:
 # $./volume.sh up
@@ -20,27 +20,27 @@ send_notification(){
     bar=$(seq -s "─" $((volume/5)) | sed 's/[0-9]//g')
     # Send the notification
     if is_mute; then
-    	dunstify -r 2593 -u normal " 婢 $volume  $bar"
+      dunstify -r 2593 -u normal " 婢 $volume  $bar"
     else
-    	dunstify -r 2593 -u normal " 墳 $volume  $bar"
+      dunstify -r 2593 -u normal " 墳 $volume  $bar"
     fi
 
 }
 
 case $1 in
-    up)
-	# Set the volume on (if it was muted)
-	# Up the volume (+ 5%)
-	amixer sset Master 5%+ > /dev/null
-	send_notification
-	;;
-    down)
-	amixer sset Master 5%- > /dev/null
-	send_notification
-	;;
-    mute)
-    # Toggle mute
-	amixer set Master 1+ toggle > /dev/null
-	send_notification
-	;;
+  up)
+  # Set the volume on (if it was muted)
+  # Up the volume (+ 5%)
+    amixer sset Master 5%+ > /dev/null
+    send_notification
+    ;;
+  down)
+    amixer sset Master 5%- > /dev/null
+    send_notification
+  ;;
+  mute)
+# Toggle mute
+    amixer set Master 1+ toggle > /dev/null
+   send_notification
+  ;;
 esac

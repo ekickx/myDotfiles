@@ -4,18 +4,18 @@ send_notification() {
   brightness=$(lux -G | grep -o '[0-9]*')
     # Make the bar with the special character ─ (it's not dash -)
     # https://en.wikipedia.org/wiki/Box-drawing_character
-    bar=$(seq -s "─" $((brightness/4)) | sed 's/[0-9]//g')
+    bar=$(seq -s "─" $((brightness/5)) | sed 's/[0-9]//g')
     # Send the notification
-    dunstify  -r 2593 -u normal " $brightness $bar" 
+    dunstify  -r 2594 -u normal "   $brightness $bar" 
  }
 
 case $1 in
   up)
-  	lux -a 6%> /dev/null
-	  send_notification
-	;;
+    lux -a 6%> /dev/null
+    send_notification
+    ;;
   down)
-	  lux -s 6%> /dev/null
-  	send_notification
-	;;
+    lux -s 6%> /dev/null
+    send_notification
+    ;;
 esac

@@ -53,9 +53,9 @@ alias tk='tmux kill-session -t'
 alias ps_mem='sudo ps_mem'
 alias cx='chmod +x'
 alias diff='diff --color'
+alias yarn='yarnpkg'
 
 alias vim='nvim'
-alias spicetify='~/Applications/exec/spicetify/spicetify'
 alias warnai='~/Applications/exec/warnai/warnai'
 
 alias dot-config='/usr/bin/git --git-dir=$HOME/Projects/Dotfiles/ --work-tree=$HOME'
