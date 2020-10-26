@@ -1,26 +1,55 @@
-# zplug initialization
-[[ ! -f $HOME/.zplug/init.zsh ]] && git clone https://github.com/zplug/zplug $HOME/.zplug
-source $HOME/.zplug/init.zsh
 
-#do self-manage
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
 
-# load config
-[[ -f $HOME/.config/zsh/init ]] && source $HOME/.config/zsh/init
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# load nice libs from oh-my-zsh
-zplug "lib/completion",   from:oh-my-zsh
-zplug "lib/history",      from:oh-my-zsh
-zplug "lib/termsupport",  from:oh-my-zsh
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
 
-# naisu minimal theme
-zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
+### End of Zinit's installer chunk
 
-# another eyecandy
-zplug 'zsh-users/zsh-autosuggestions', from:github
-zplug 'MikeDacre/tmux-zsh-vim-titles', from:github
-zplug 'zdharma/fast-syntax-highlighting', defer:2, hook-load:'FAST_HIGHLIGHT=()'
+### Your actual config here
 
-# finally install and load those plugins
-zplug check || zplug install
-zplug load
+# Load theme
+zinit light denysdovhan/spaceship-prompt
+
+# Load my zsh lib (alias, keybind, etc) from gitlab
+zinit ice pick="init.zsh" from="gitlab"
+zinit light ekickx/my-zsh-lib
+
+# Nice libs from oh-my-zsh
+# Load this lib immediatly because it can't work if wait
+zinit snippet OMZ::lib/history.zsh 
+# Load these libs only after prompt is loaded
+zinit wait="0" lucid for \
+    OMZ::lib/completion.zsh \
+    OMZ::lib/termsupport.zsh
+
+# Load these plugins 1 second after prompt loaded
+zinit wait="1" lucid light-mode for \
+    zdharma/fast-syntax-highlighting \
+    zsh-users/zsh-autosuggestions \
+    zdharma/history-search-multi-word \
+    wfxr/forgit
+
+# Provide cool binaries from github release
+zinit as="program" wait="1" lucid from="github-rel" for \
+    junegunn/fzf-bin 
+# Move delta from its subdir to the main dir and pick it as program
+zinit ice mv="delta-0.4.4-x86_64-unknown-linux-gnu/delta -> delta" \
+    wait="1" lucid pick="delta" as="program" from="github-rel"
+zinit load dandavison/delta
