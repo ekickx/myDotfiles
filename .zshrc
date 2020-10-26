@@ -22,29 +22,30 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-### Your actual config here
+### The actual config
+
+# Speed test
+zinit light paulmelnikow/zsh-startup-timer
 
 # Load theme
 zinit light denysdovhan/spaceship-prompt
 
-# Load my zsh lib (alias, keybind, etc) from gitlab
-zinit ice pick="init.zsh" from="gitlab"
-zinit light ekickx/my-zsh-lib
-
 # Nice libs from oh-my-zsh
 # Load this lib immediatly because it can't work if wait
-zinit snippet OMZ::lib/history.zsh 
+zinit for \
+    OMZ::lib/history.zsh \
+    OMZ::lib/key-bindings.zsh 
 # Load these libs only after prompt is loaded
-zinit wait="0" lucid for \
+zinit wait lucid for \
     OMZ::lib/completion.zsh \
     OMZ::lib/termsupport.zsh
 
 # Load these plugins 1 second after prompt loaded
 zinit wait="1" lucid light-mode for \
-    zdharma/fast-syntax-highlighting \
     zsh-users/zsh-autosuggestions \
     zdharma/history-search-multi-word \
-    wfxr/forgit
+    wfxr/forgit \
+    zdharma/fast-syntax-highlighting 
 
 # Provide cool binaries from github release
 zinit as="program" wait="1" lucid from="github-rel" for \
@@ -53,3 +54,6 @@ zinit as="program" wait="1" lucid from="github-rel" for \
 zinit ice mv="delta-0.4.4-x86_64-unknown-linux-gnu/delta -> delta" \
     wait="1" lucid pick="delta" as="program" from="github-rel"
 zinit load dandavison/delta
+
+# Load my aliases
+source $HOME/.aliases
