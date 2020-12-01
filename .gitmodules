@@ -1,9 +1,12 @@
-[submodule ".config/mpv"]
-	path = .config/mpv
-	url = https://github.com/ekickx/Uzuki-MPV
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = https://github.com/ekickx/meh-nvim-conf
-[submodule ".scripts/color"]
-	path = .scripts/color
+[submodule "bin/color"]
+	path = bin/color
 	url = https://github.com/stark/color-scripts
+[submodule "term-n-shell"]
+	path = term-n-shell
+	url = git@github.com:ekickx/term-n-shell.git
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/ekickx/mmm-nvimrc
+[submodule "mpv"]
+	path = mpv
+	url = https://github.com/ekickx/Uzuki-MPV

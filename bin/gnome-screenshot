@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Init Var
+DIR="${HOME}/Pictures/Screenshots"
+DATE="$(date +%Y-%m-%d-%H-%M-%S)"
+NAME="${DIR}/${DATE}_screenshot.png"
+
+screenshot="gnome-screenshot -e shadow -f "${NAME}""
+
+# Check if the dir to store the screenshots exists, else create it:
+if [ ! -d "${DIR}" ]; then mkdir -p "${DIR}"; fi
+
+# Screenshot the entire screen
+if [ "$1" = "scr" ]; then ${screenshot}; fi
+
+# Screenshot the selected area
+if [ "$1" = "area" ]; then ${screenshot} -a; fi
+
+# Screenshot the selected window
+if [ "$1" = "window" ]; then ${screenshot} -w; fi
