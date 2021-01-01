@@ -6,7 +6,10 @@
 	url = git@github.com:ekickx/term-n-shell.git
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/ekickx/mmm-nvimrc
+	url = git@github.com:ekickx/mmm-nvimrc
 [submodule "mpv"]
 	path = mpv
-	url = https://github.com/ekickx/Uzuki-MPV
+	url = git@github.com:ekickx/mpv
+[submodule "shell"]
+	path = shell
+	url = git@github.com:ekickx/shell
