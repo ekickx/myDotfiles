@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# Init Var
-eval "$(xdotool getwindowfocus getwindowgeometry --shell)"
-X_rel="$(xwininfo -id "$(xdotool getwindowfocus)" | grep Relative | grep X | grep -o '[0-9]*')"
-Y_rel="$(xwininfo -id "$(xdotool getwindowfocus)" | grep Relative | grep Y | grep -o '[0-9]*')"
-
-xdotool getwindowfocus windowmove $((X+$1-X_rel*2)) $((Y+$2-Y_rel*2))\
-  windowsize $((WIDTH+$3)) $((HEIGHT+$4))
