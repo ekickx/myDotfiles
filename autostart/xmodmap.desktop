@@ -4,7 +4,7 @@ Version=0.9.4
 Type=Application
 Name=Xmodmap
 Comment=Modify key
-Exec=bash -c "sleep 20; xmodmap ~/.config/xmodmap"
+Exec=bash -c "sleep 20; xmodmap ~/.config/xmodmap && xcape -e 'Mode_switch=Escape'"
 StartupNotify=false
 Terminal=false
 Hidden=false
